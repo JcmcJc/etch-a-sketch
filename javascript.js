@@ -36,4 +36,28 @@ function gridCreation(size) {
   }
 }
 
-gridCreation(50);
+function gridDeletion() {
+  grid.replaceChildren();
+}
+function gridClear(size) {
+  gridDeletion();
+  gridCreation(4);
+}
+
+let btnSize = document.querySelector("#size");
+let btnReset = document.querySelector("#erase");
+//Default grid
+gridCreation(4);
+
+//When the user presses the "Change board size button" a new board size is created
+btnSize.addEventListener("click", () => {
+  let grid = prompt("Enter size of board");
+  let size = grid;
+  console.log(size);
+  gridDeletion();
+  gridCreation(size);
+});
+btnReset.addEventListener("click", () => {
+  console.log("deleted");
+  gridClear();
+});
