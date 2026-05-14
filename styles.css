@@ -13,11 +13,45 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-image: linear-gradient(
+    to top,
+    beige,
+    rgb(233, 232, 231),
+    rgb(211, 174, 209)
+  );
 }
 .container {
   display: flex;
   padding: 32px;
   flex: 1 1 auto;
+}
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+  margin: 0;
+  padding: 16px;
+}
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+.button {
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgb(201, 198, 198);
+  border-radius: 35%;
+  background-color: black;
+  color: aliceblue;
+  font-size: 12px;
+  box-shadow: 0 0 3px gray;
+  padding: 8px;
+  overflow: hidden;
+}
+.button:hover {
+  background-color: gray;
 }
 .grid {
   border: 1px solid gray;
@@ -35,7 +69,7 @@ body {
 }
 .grid-square {
   border: 1px solid lightgrey;
-  color: red;
+  background-color: white;
   box-sizing: border-box;
   border-collapse: collapse;
 }
