@@ -3,26 +3,41 @@
 html,
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
 }
 body {
   font-family: Roboto, sans-serif;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
 }
 .container {
   display: flex;
-  flex: 1;
+  padding: 32px;
+  flex: 1 1 auto;
 }
 .grid {
   display: flex;
-  flex: 1;
   flex-direction: column;
   flex-wrap: wrap;
+  flex: 1 0 auto;
+  aspect-ratio: 1 / 1;
+  max-height: 660px;
+  max-width: 660px;
+  min-width: 60%;
+  min-height: 60%;
 }
 .grid-square {
-  border: 0.5px solid black;
-  flex: 1 0 calc(25% - 10px);
+  border: 1px solid black;
   color: red;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  margin: -1px -1px 0 0;
+}
+
+.grid-square:hover {
+  background-color: lightblue;
 }
