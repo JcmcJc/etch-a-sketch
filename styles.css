@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: Roboto, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.container {
+  display: flex;
+  flex: 1;
+}
+.grid {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.grid-square {
+  border: 0.5px solid black;
+  flex: 1 0 calc(25% - 10px);
+  color: red;
+}
