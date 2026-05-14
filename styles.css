@@ -20,6 +20,9 @@ body {
   flex: 1 1 auto;
 }
 .grid {
+  border: 1px solid gray;
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -31,13 +34,8 @@ body {
   min-height: 60%;
 }
 .grid-square {
-  border: 1px solid black;
+  border: 1px solid lightgrey;
   color: red;
   box-sizing: border-box;
   border-collapse: collapse;
-  margin: -1px -1px 0 0;
-}
-
-.grid-square:hover {
-  background-color: lightblue;
 }
