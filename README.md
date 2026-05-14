@@ -1,5 +1,5 @@
 # etch-a-sketch
-TOP's third project.
+TOP's fourth project.
 
 This project will demonstrate skills that I have learned in JavaScript, CSS, and HTML. The project is part of The Odin's Project curriculum and is the fourth project out of five.
 
