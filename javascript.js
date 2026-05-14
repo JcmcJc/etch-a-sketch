@@ -9,8 +9,6 @@ gridSquare.textContent = "test";
 gridSquare.style.border = "0.5px solid black";
 gridSquare.classList.add("grid-square");
 
-//Creating the grid squares based of the size demanded
-
 const randomColour = () => {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
@@ -18,6 +16,8 @@ const randomColour = () => {
 
   return `rgb(${r} ${g} ${b} /20%)`;
 };
+
+// Creating the gride based on user input
 function gridCreation(size) {
   let calc = 100 / size;
 
@@ -41,23 +41,33 @@ function gridDeletion() {
 }
 function gridClear(size) {
   gridDeletion();
-  gridCreation(4);
+  gridCreation(size);
 }
 
 let btnSize = document.querySelector("#size");
 let btnReset = document.querySelector("#erase");
-//Default grid
+
+//Default grid when the page loads
 gridCreation(4);
 
 //When the user presses the "Change board size button" a new board size is created
 btnSize.addEventListener("click", () => {
-  let grid = prompt("Enter size of board");
+  let grid = prompt("Enter the size of a board between 1-100");
   let size = grid;
   console.log(size);
-  gridDeletion();
-  gridCreation(size);
+  if (size != null && size >= 1 && size <= 100) {
+    gridDeletion();
+    gridCreation(size);
+  } else {
+    alert("Enter a valid size");
+  }
+  return size;
 });
 btnReset.addEventListener("click", () => {
   console.log("deleted");
-  gridClear();
+  const gridSquare = document.querySelectorAll(".grid-square");
+  gridSquare.forEach((sq) => {
+    sq.style.background = "white";
+    sq.style.opacity = 1;
+  });
 });
